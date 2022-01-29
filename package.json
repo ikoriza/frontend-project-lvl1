@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Brain Games. Level 1 Hexlet JS Project",
   "type": "module",
   "main": "index.js",
