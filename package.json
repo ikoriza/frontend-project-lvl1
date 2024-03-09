@@ -4,7 +4,8 @@
   "type": "module",
   "description": "[![Actions Status](https://github.com/ikoriza/frontend-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/ikoriza/frontend-project-lvl1/actions)",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
