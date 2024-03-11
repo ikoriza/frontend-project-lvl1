@@ -4,5 +4,5 @@
 
 ---
 
-### Project demo:
+### Usage:
 [![asciicast](https://asciinema.org/a/646063.svg)](https://asciinema.org/a/646063)
