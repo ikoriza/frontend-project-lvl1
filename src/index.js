@@ -1,23 +1,22 @@
 import readlineSync from 'readline-sync';
-import { getRandomIntInclusive, isEven } from './lib.js';
 
-const game = () => {
+const game = (taskText, questionGenerator, answerGenerator) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log(taskText);
 
   const questionsCount = 3;
   for (let i = 0; i < questionsCount; i += 1) {
-    const questionNumber = getRandomIntInclusive(1, 100);
-    const answer = isEven(questionNumber);
-    console.log(`Question: ${questionNumber}`);
+    const question = questionGenerator();
+    const answer = answerGenerator(question);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer === answer) {
       console.log('Correct!');
     } else {
-      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".\nLet's try again, ${userName}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${userName}!`);
       return;
     }
   }
